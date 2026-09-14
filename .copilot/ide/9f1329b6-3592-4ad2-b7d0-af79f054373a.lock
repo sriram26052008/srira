@@ -1,0 +1,14 @@
+{
+  "socketPath": "\\\\.\\pipe\\mcp-b88e728e-ca4e-461a-92b0-397020f898e3.sock",
+  "scheme": "pipe",
+  "headers": {
+    "Authorization": "Nonce 86aea96c-50d2-4aaa-99cd-7e2f6d3b2396"
+  },
+  "pid": 15480,
+  "ideName": "Visual Studio Code",
+  "timestamp": 1789386858400,
+  "workspaceFolders": [
+    "c:\\Users\\srira\\OneDrive\\Documents\\feedforward"
+  ],
+  "isTrusted": true
+}

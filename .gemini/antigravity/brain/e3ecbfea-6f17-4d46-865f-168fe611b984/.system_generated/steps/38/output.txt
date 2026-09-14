@@ -1,0 +1,15 @@
+
+The command exited with code 0.
+Output:
+Collecting websockets
+  Downloading websockets-17.1-cp314-cp314-win_amd64.whl.metadata (6.5 kB)
+Collecting python-multipart
+  Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+Downloading websockets-17.1-cp314-cp314-win_amd64.whl (217 kB)
+Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+Installing collected packages: websockets, python-multipart
+  WARNING: The script websockets.exe is installed in 'C:\Users\srira\AppData\Local\Python\pythoncore-3.14-64\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+
+Successfully installed python-multipart-0.0.32 websockets-17.1
+

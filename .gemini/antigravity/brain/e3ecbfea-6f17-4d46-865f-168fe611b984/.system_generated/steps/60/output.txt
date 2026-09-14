@@ -1,0 +1,73 @@
+The following changes were made by the replace_file_content tool to: c:\Users\srira\OneDrive\Documents\feedforward\tests\test_backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -56,7 +56,7 @@
+     # Check that item aggregates has Idlis >= 4 and Chapattis >= 3
+     assert demand["item_aggregates"]["Idlis"]["count"] >= 4
+     assert demand["item_aggregates"]["Chapattis"]["count"] >= 3
+-    print(f"✓ test_student_rsvp_and_chef_demand PASSED: Chef prep sheet shows {demand['item_aggregates']['Idlis']['count']} Idlis, {demand['item_aggregates']['Chapattis']['count']} Chapattis")
++    print(f"[OK] test_student_rsvp_and_chef_demand PASSED: Chef prep sheet shows {demand['item_aggregates']['Idlis']['count']} Idlis, {demand['item_aggregates']['Chapattis']['count']} Chapattis")
+ 
+ def test_canteen_entry_verification():
+     # Rahul has RSVP'd -> Gatekeeper checks in
+@@ -70,7 +70,7 @@
+     assert data["status"] == "APPROVED"
+     assert data["dietary_choice"] == "Non-Veg"
+     assert data["quantities"]["Idlis"] == 4
+-    print("✓ test_canteen_entry_verification PASSED")
++    print("[OK] test_canteen_entry_verification PASSED")
+ 
+ def test_black_star_and_fine_trigger():
+     # Test Black Star logic on student Vignesh (u_student_3, currently has 1 star)
+@@ -98,7 +98,7 @@
+     assert d2["black_stars"] == 3
+     assert d2["fine_triggered"] is True
+     assert d2["fine_amount"] == 100.0
+-    print(f"✓ test_black_star_and_fine_trigger PASSED: Reached 3 stars -> Fine levied ₹{d2['fine_amount']}")
++    print(f"[OK] test_black_star_and_fine_trigger PASSED: Reached 3 stars -> Fine levied Rs {d2['fine_amount']}")
+ 
+     # Check notification sent to student
+     notifs = client.get("/api/notifications?user_id=u_student_3").json()
+@@ -105,5 +105,5 @@
+     assert len(fine_notifs) >= 1
+-    print("✓ test_fine_notification PASSED")
++    print("[OK] test_fine_notification PASSED")
+ 
+ def test_fine_payment_and_star_reset():
+     pay_payload = {
+@@ -116,7 +116,7 @@
+     profile = client.get("/api/users/u_student_3").json()
+     assert profile["black_stars"] == 0
+     assert profile["fines_accumulated"] == 0.0
+-    print("✓ test_fine_payment_and_star_reset PASSED: Black stars reset to 0 after clearance")
++    print("[OK] test_fine_payment_and_star_reset PASSED: Black stars reset to 0 after clearance")
+ 
+ def test_waste_segregation_and_official_alerts():
+     # 1. Log Clean Plate Waste -> Animal Feed
+@@ -147,7 +147,7 @@
+     # Check that Biogas official received alert
+     biogas_notifs = client.get("/api/notifications?role=biogas_official").json()
+     assert any("28.0 kg Spoilt Food for Biogas" in n["title"] or "28" in n["message"] for n in biogas_notifs)
+-    print("✓ test_biogas_official_notification PASSED: Urgent alert received by Biogas official")
++    print("[OK] test_biogas_official_notification PASSED: Urgent alert received by Biogas official")
+ 
+     # Update Biogas waste status to 'collected'
+     stat_update = {
+@@ -163,7 +163,7 @@
+     assert analytics["animal_feed_kg"] >= 14.5
+     assert analytics["biogas_m3"] > 0
+     assert analytics["green_kwh"] > 0
+-    print(f"✓ test_waste_analytics PASSED: Biogas diverted: {analytics['biogas_kg']} kg ({analytics['green_kwh']} kWh green energy), Animal Feed: {analytics['animal_feed_kg']} kg ({analytics['animal_meals']} animal meals)")
++    print(f"[OK] test_waste_analytics PASSED: Biogas diverted: {analytics['biogas_kg']} kg ({analytics['green_kwh']} kWh green energy), Animal Feed: {analytics['animal_feed_kg']} kg ({analytics['animal_meals']} animal meals)")
+ 
+ if __name__ == "__main__":
+     print("\n--- Running FeedForward Backend Verification Tests ---")
+@@ -172,5 +172,5 @@
+     test_black_star_and_fine_trigger()
+     test_fine_payment_and_star_reset()
+     test_waste_segregation_and_official_alerts()
+-    print("\n🎉 ALL BACKEND TEST CASES PASSED PERFECTLY!\n")
++    print("\n[SUCCESS] ALL BACKEND TEST CASES PASSED PERFECTLY!\n")
+ 
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

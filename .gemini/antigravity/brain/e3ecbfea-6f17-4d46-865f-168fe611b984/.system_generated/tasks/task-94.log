@@ -1,0 +1,9 @@
+INFO:     Started server process [9584]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:57127 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57130 - "GET /api/meals HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57132 - "GET /api/meals HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57133 - "GET /api/chef/demand/meal_hostel_lunch HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57136 - "GET /static/js/app.js HTTP/1.1" 200 OK

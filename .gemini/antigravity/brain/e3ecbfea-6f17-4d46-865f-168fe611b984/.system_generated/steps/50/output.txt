@@ -1,0 +1,20 @@
+
+The command exited with code 0.
+Output:
+Collecting httpx
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Requirement already satisfied: anyio in C:\Users\srira\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from httpx) (4.15.1)
+Requirement already satisfied: certifi in C:\Users\srira\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from httpx) (2026.7.22)
+Collecting httpcore==1.* (from httpx)
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Requirement already satisfied: idna in C:\Users\srira\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from httpx) (3.19)
+Requirement already satisfied: h11>=0.16 in C:\Users\srira\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from httpcore==1.*->httpx) (0.16.0)
+Requirement already satisfied: typing_extensions>=4.16.0 in C:\Users\srira\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages (from anyio->httpx) (4.16.0)
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Installing collected packages: httpcore, httpx
+  WARNING: The script httpx.exe is installed in 'C:\Users\srira\AppData\Local\Python\pythoncore-3.14-64\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+
+Successfully installed httpcore-1.0.9 httpx-0.28.1
+

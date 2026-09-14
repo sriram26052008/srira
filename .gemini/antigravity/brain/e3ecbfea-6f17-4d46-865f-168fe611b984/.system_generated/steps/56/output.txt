@@ -1,0 +1,14 @@
+The following changes were made by the replace_file_content tool to: c:\Users\srira\OneDrive\Documents\feedforward\tests\test_backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -26,7 +26,7 @@
+     meals = response.json()
+     assert len(meals) >= 2
+     assert any(m["id"] == "meal_hostel_lunch" for m in meals)
+-    print("✓ test_get_meals PASSED")
++    print("[OK] test_get_meals PASSED")
+ 
+ def test_student_rsvp_and_chef_demand():
+     # Student Rahul RSVPs for Lunch with 4 Idlis and 3 Chapattis, Non-Veg
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

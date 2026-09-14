@@ -1,0 +1,11 @@
+
+The command exited with code 1.
+Output:
+
+Name       Source                                                       
+----       ------                                                       
+python.exe C:\Users\srira\AppData\Local\Microsoft\WindowsApps\python.exe
+py.exe     C:\Users\srira\AppData\Local\Microsoft\WindowsApps\py.exe    
+
+
+

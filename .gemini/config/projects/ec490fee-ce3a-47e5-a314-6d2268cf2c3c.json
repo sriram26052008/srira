@@ -1,0 +1,15 @@
+{
+  "id": "ec490fee-ce3a-47e5-a314-6d2268cf2c3c",
+  "name": "feedforward",
+  "projectResources": {
+    "resources": [
+      {
+        "gitFolder": {
+          "folderUri": "file:///c%3A/Users/srira/OneDrive/Documents/feedforward"
+        }
+      }
+    ]
+  },
+  "settings": {},
+  "isWorkspaceOnly": false
+}

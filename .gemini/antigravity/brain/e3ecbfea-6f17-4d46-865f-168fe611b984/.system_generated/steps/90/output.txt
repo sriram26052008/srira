@@ -1,0 +1,19 @@
+The following changes were made by the replace_file_content tool to: c:\Users\srira\OneDrive\Documents\feedforward\tests\test_backend.py. If relevant, proactively run terminal commands to execute this code for the USER. Don't ask for permission.
+[diff_block_start]
+@@ -74,7 +74,12 @@
+     print("[OK] test_canteen_entry_verification PASSED")
+ 
+ def test_black_star_and_fine_trigger():
+-    # Test Black Star logic on student Vignesh (u_student_3, currently has 1 star)
++    # Reset student Vignesh (u_student_3) to 1 star for clean repeatable test
++    conn = get_connection()
++    conn.cursor().execute("UPDATE users SET black_stars = 1, fines_accumulated = 0.0 WHERE id = 'u_student_3'")
++    conn.commit()
++    conn.close()
++
+     # Issue star #2
+     pen_1 = {
+         "user_id": "u_student_3",
+[diff_block_end]
+
+Please note that the above snippet only shows the MODIFIED lines from the last change. It shows up to 3 lines of unchanged lines before and after the modified lines. The actual file contents may have many more lines not shown.

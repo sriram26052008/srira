@@ -1,0 +1,11 @@
+
+The command exited with code 1.
+Output:
+Select-Object : Property "title" cannot be found.
+At line:1 char:60
++ ... .0.0.1:8000/api/meals" | Select-Object -First 1 -ExpandProperty title
++                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (  :PSObject) [Select-Object], PSArgumentException
+    + FullyQualifiedErrorId : ExpandPropertyNotFound,Microsoft.PowerShell.Commands.SelectObjectCommand
+ 
+
